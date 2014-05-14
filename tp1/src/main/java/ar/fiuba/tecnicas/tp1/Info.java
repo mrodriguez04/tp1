@@ -1,10 +1,17 @@
 package ar.fiuba.tecnicas.tp1;
-
+import ar.fiuba.tecnicas.tp1.registro.*;
 
 public class Info extends Level{
+	Registra reg;
+	
+	Info(Registra registro){
+		reg = registro;
+	}
+	
 	public void info(String log){
 		// Hay que implementar estos metodos
-		System.out.println(log);
+		reg.Imprimir(log);
+		
 	}
 	public void warn(String log){
 		System.out.println(log);
@@ -13,7 +20,7 @@ public class Info extends Level{
 		
 	}
 	public void fatal(String log){
-		System.out.println(log);
+		reg.Imprimir(log);
 	}
 	
 	

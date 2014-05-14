@@ -7,15 +7,15 @@ public class Logger {
 		level = level1;
 	}
 
-	public void Debug(String log){
+	public void debug(String log){
 		level.debug(log);
 	}
 	
-	public void Info(String log){
+	public void info(String log){
 		level.info(log);
 	}
 	
-	public void Fatal(String log){
+	public void fatal(String log){
 		level.fatal(log);
 	}
 	
