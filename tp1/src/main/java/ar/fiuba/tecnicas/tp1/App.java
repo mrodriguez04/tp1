@@ -1,5 +1,6 @@
 package ar.fiuba.tecnicas.tp1;
 import ar.fiuba.tecnicas.tp1.registro.*;
+
 /**
  * Hello world!
  *
@@ -23,9 +24,12 @@ public class App
         
         Level nivel = new Info(reg);
         Logger log = new Logger(nivel);
-        log.debug("No debe loguear DEBUG");
-        log.info("Ver como loguea INFO");
-        log.fatal("Ver como loguea FATAL");
+        Formateo format = new Formateo(config.get_Formateo());
+        
+        
+        log.debug(format.formateo("No debe loguear DEBUG"));
+        log.info(format.formateo("Ver como loguea INFO"));
+        log.fatal(format.formateo("Ver como loguea FATAL"));
         
         
     }

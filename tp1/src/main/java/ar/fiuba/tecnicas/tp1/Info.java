@@ -14,10 +14,10 @@ public class Info extends Level{
 		
 	}
 	public void warn(String log){
-		System.out.println(log);
+		reg.Imprimir(log);
 	}
 	public void error(String log){
-		
+		reg.Imprimir(log);
 	}
 	public void fatal(String log){
 		reg.Imprimir(log);

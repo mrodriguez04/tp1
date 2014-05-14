@@ -53,5 +53,8 @@ public class Config {
 		return prop.getProperty("aplicacion");
 	}
 	
+	String get_Formateo(){
+		return prop.getProperty("formato");
+	}
 	
 }
