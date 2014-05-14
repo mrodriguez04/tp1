@@ -13,7 +13,7 @@ public class Info extends Level{
 		
 	}
 	public void fatal(String log){
-		
+		System.out.println(log);
 	}
 	
 	

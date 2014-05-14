@@ -17,7 +17,9 @@ public class App
         
         Level nivel = new Info();
         Logger log = new Logger(nivel);
-        log.Info("Ver como loguea");
+        log.Debug("No debe loguear DEBUG");
+        log.Info("Ver como loguea INFO");
+        log.Fatal("Ver como loguea FATAL");
         
         
     }
