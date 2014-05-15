@@ -1,18 +1,15 @@
 package ar.fiuba.tecnicas.tp1;
+
 import ar.fiuba.tecnicas.tp1.registro.*;
 
-public class Info extends Level{
+public class Warn {
+
 	Registra reg;
 	Formateo fr;
-	
-	Info(Registra registro, Formateo formato){
+	public Warn (Registra registro, Formateo formato){
+		// Hay que implementar todos esto metodos
 		reg = registro;
 		fr = formato;
-	}
-	
-	public void info(String log){
-		// Hay que implementar estos metodos
-	    reg.Imprimir(fr.formateo(log, "INFO"));
 	}
 	public void warn(String log){
 		reg.Imprimir(fr.formateo(log, "WARN"));
@@ -23,7 +20,4 @@ public class Info extends Level{
 	public void fatal(String log){
 		reg.Imprimir(fr.formateo(log, "FATAL"));
 	}
-	
-	
-
 }

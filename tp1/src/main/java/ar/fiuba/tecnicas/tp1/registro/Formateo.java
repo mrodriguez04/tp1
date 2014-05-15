@@ -8,7 +8,8 @@ public class Formateo{
 	Forma fecha;
 	Forma thread;
 	Forma nivel;
-	public Formateo(String variables, String tipo){
+	String tipo;
+	public Formateo(String variables, String nivelLog){
 		lf = new ArrayList<Forma>();
 		var = variables.split("%");
 		for (String v : var){
@@ -19,21 +20,19 @@ public class Formateo{
 				thread = new Hilo();
 				lf.add(thread);
 			}else if ( v.equals("p")){
-				nivel = new Nivel(tipo);
+				nivel = new Nivel(nivelLog, this);
 				lf.add(nivel);
-				
-				
 			}
 			
 		} 
 		
 	}
 	
-	public String formateo(String log){
+	public String formateo(String log, String tipo){
 		String retorno;
+		this.tipo = tipo;
 		linea = new StringBuilder();
 		for (Forma v : lf){
-			
 			v.concatena(linea);
 			linea.append(" ");
 		}
@@ -41,5 +40,8 @@ public class Formateo{
 		return retorno;
 	}
 	
+	public String nivel(Forma tipoNivel){
+		return this.tipo;
+	}
 
 }
