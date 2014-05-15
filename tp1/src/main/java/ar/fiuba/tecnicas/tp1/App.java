@@ -9,6 +9,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	
     	Config config = new Config("conf/config.properties");
     	// Armo los dispositivos en los cuales voy a imprimir los logs
     	Registra reg = new Registra();
