@@ -4,16 +4,27 @@ import ar.fiuba.tecnicas.tp1.registro.Formateo;
 import ar.fiuba.tecnicas.tp1.registro.Registra;
 
 public class Fatal extends Level {
-	Registra reg;
-	Formateo fr;
+	
 	public Fatal(Registra registro, Formateo formato){
 		// Hay que implementar todos esto metodos
-		reg = registro;
-		fr = formato;
+		super(registro, formato);
 	}
 	
+	public void debug (String log){
+		// No hago nada
+	}
+	public void info(String log){
+		// No hago nada
+		
+	}
+	public void warn(String log){
+		// No hago nada
+	}
+	public void error(String log){
+		// No hago nada
+	}
 	public void fatal(String log){
-		reg.Imprimir(fr.formateo(log, "FATAL"));
+		super.fatal(log);
 	}
 	
 }

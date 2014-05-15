@@ -5,23 +5,25 @@ public class Info extends Level{
 	Registra reg;
 	Formateo fr;
 	
-	Info(Registra registro, Formateo formato){
-		reg = registro;
-		fr = formato;
+	public Info(Registra registro, Formateo formato){
+		super(registro, formato);
 	}
 	
+	public void debug (String log){
+		// No hago nada
+	}
 	public void info(String log){
-		// Hay que implementar estos metodos
-	    reg.Imprimir(fr.formateo(log, "INFO"));
+		super.info(log);
+		
 	}
 	public void warn(String log){
-		reg.Imprimir(fr.formateo(log, "WARN"));
+		super.warn(log);
 	}
 	public void error(String log){
-		reg.Imprimir(fr.formateo(log, "ERROR"));
+		super.error(log);
 	}
 	public void fatal(String log){
-		reg.Imprimir(fr.formateo(log, "FATAL"));
+		super.fatal(log);
 	}
 	
 	

@@ -4,28 +4,27 @@ import ar.fiuba.tecnicas.tp1.registro.Formateo;
 import ar.fiuba.tecnicas.tp1.registro.Registra;
 
 public class Debug extends Level {
-	Registra reg;
-	Formateo fr;
-	
+		
 	public Debug(Registra registro, Formateo formato){
 		// Hay que implementar todos esto metodos
-		reg = registro;
-		fr = formato;
+		super(registro, formato);
 	}
+	
 	public void debug(String log){
-		reg.Imprimir(fr.formateo(log, "DEBUG"));
+		super.debug(log);
 	}
 	public void info(String log){
-		reg.Imprimir(fr.formateo(log, "INFO"));
+		super.info(log);
+		
 	}
 	public void warn(String log){
-		reg.Imprimir(fr.formateo(log, "WARN"));
+		super.warn(log);
 	}
 	public void error(String log){
-		reg.Imprimir(fr.formateo(log, "ERROR"));
+		super.error(log);
 	}
 	public void fatal(String log){
-		reg.Imprimir(fr.formateo(log, "FATAL"));
+		super.fatal(log);
 	}
 	
 
