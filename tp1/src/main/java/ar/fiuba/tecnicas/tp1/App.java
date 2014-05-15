@@ -21,15 +21,15 @@ public class App
         System.out.println( config.get_LogLevel());
         System.out.println( config.get_ArchivoLog());
         System.out.println( config.get_Aplicacion());
-        
-        Level nivel = new Info(reg);
-        Logger log = new Logger(nivel);
         Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel());
+        Level nivel = new Info(reg, format);
+        Logger log = new Logger(nivel);
+       
         
         
-        log.debug(format.formateo("No debe loguear DEBUG"));
-        log.info(format.formateo("Ver como loguea INFO"));
-        log.fatal(format.formateo("Ver como loguea FATAL"));
+        log.debug("No debe loguear DEBUG");
+        log.info("Ver como loguea INFO");
+        log.fatal("Ver como loguea FATAL");
         
         
     }
