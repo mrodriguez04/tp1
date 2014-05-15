@@ -3,11 +3,12 @@ import java.util.*;
 
 public class Formateo{
 	String var[];
-	String linea;
+	StringBuilder linea;
 	ArrayList <Forma> lf;
 	Forma fecha;
 	Forma thread;
-	public Formateo(String variables){
+	Forma nivel;
+	public Formateo(String variables, String tipo){
 		lf = new ArrayList<Forma>();
 		var = variables.split("%");
 		for (String v : var){
@@ -17,18 +18,27 @@ public class Formateo{
 			}else if ( v.equals("t")) {
 				thread = new Hilo();
 				lf.add(thread);
+			}else if ( v.equals("p")){
+				nivel = new Nivel(tipo);
+				lf.add(nivel);
+				
+				
 			}
+			
 		} 
 		
 	}
 	
 	public String formateo(String log){
-		linea = new String();
+		String retorno;
+		linea = new StringBuilder();
 		for (Forma v : lf){
+			
 			v.concatena(linea);
+			linea.append(" ");
 		}
-		linea.concat(log);
-		return linea;
+		retorno = linea.append(log).toString();
+		return retorno;
 	}
 	
 

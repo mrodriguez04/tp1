@@ -11,9 +11,9 @@ public class Tiempo implements Forma {
     }
     
 	
-	public String concatena(String dato){
+	public StringBuilder concatena(StringBuilder dato){
 		date = new Date();
-		dato.concat(dateFormat.format(date));
+		dato.append(dateFormat.format(date));
 		return dato;
 	
 	

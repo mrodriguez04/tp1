@@ -2,5 +2,5 @@ package ar.fiuba.tecnicas.tp1.registro;
 
 public interface Forma {
 
-	public String concatena(String dato);
+	public StringBuilder concatena(StringBuilder dato);
 }

@@ -24,7 +24,7 @@ public class App
         
         Level nivel = new Info(reg);
         Logger log = new Logger(nivel);
-        Formateo format = new Formateo(config.get_Formateo());
+        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel());
         
         
         log.debug(format.formateo("No debe loguear DEBUG"));
