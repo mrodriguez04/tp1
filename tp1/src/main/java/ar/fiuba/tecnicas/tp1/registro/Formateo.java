@@ -28,7 +28,7 @@ public class Formateo{
 		
 	}
 	
-	public String formateo(String log, String tipo){
+	public String armar(String log, String tipo){
 		String retorno;
 		this.tipo = tipo;
 		linea = new StringBuilder();
