@@ -1,10 +1,10 @@
 package ar.fiuba.tecnicas.tp1.registro;
 import java.util.*;
 
-public class Registra {
+public class OperadorDeDispositivos {
 	ArrayList<Dispositivo> ld;
 	
-	public Registra (){
+	public OperadorDeDispositivos (){
 		ld = new ArrayList<Dispositivo>();
 	}
 	

@@ -2,9 +2,9 @@ package ar.fiuba.tecnicas.tp1;
 
 import ar.fiuba.tecnicas.tp1.registro.*;
 
-public class Error extends Logueo {
+public class Error extends Registrador {
 	
-	public Error (Registra registro, Formateo formato){
+	public Error (OperadorDeDispositivos registro, Formateo formato){
 		// Hay que implementar todos esto metodos
 		super(registro, formato);
 	}

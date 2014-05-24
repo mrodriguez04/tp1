@@ -12,15 +12,15 @@ public class App
     	
     	Config config = new Config("conf/config.properties");
     	// Armo los dispositivos en los cuales voy a imprimir los logs
-    	Registra reg = new Registra();
+    	OperadorDeDispositivos oper = new OperadorDeDispositivos();
     	Dispositivo disp1 = new Consola();
     	Dispositivo disp2 = new Archivo(config.get_ArchivoLog());
-    	reg.agregarDispositivo(disp1);
-    	reg.agregarDispositivo(disp2);
+    	oper.agregarDispositivo(disp1);
+    	oper.agregarDispositivo(disp2);
     	
         Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel());
-        Logueo nivel = new Info(reg, format);
-        Logger log = new Logger(nivel);
+        Registrador nivel = new Info(oper, format);
+        Logeable log = new Logeable(nivel);
        
         
         

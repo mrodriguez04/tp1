@@ -1,11 +1,12 @@
 package ar.fiuba.tecnicas.tp1;
 
 import ar.fiuba.tecnicas.tp1.registro.Formateo;
-import ar.fiuba.tecnicas.tp1.registro.Registra;
+import ar.fiuba.tecnicas.tp1.registro.OperadorDeDispositivos;
 
-public class Debug extends Logueo {
+
+public class Debug extends Registrador {
 		
-	public Debug(Registra registro, Formateo formato){
+	public Debug(OperadorDeDispositivos registro, Formateo formato){
 		// Hay que implementar todos esto metodos
 		super(registro, formato);
 	}

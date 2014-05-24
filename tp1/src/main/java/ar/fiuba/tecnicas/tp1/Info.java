@@ -1,11 +1,11 @@
 package ar.fiuba.tecnicas.tp1;
 import ar.fiuba.tecnicas.tp1.registro.*;
 
-public class Info extends Logueo{
-	Registra reg;
+public class Info extends Registrador{
+	OperadorDeDispositivos reg;
 	Formateo fr;
 	
-	public Info(Registra registro, Formateo formato){
+	public Info(OperadorDeDispositivos registro, Formateo formato){
 		super(registro, formato);
 	}
 	

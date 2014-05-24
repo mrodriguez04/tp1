@@ -1,11 +1,12 @@
 package ar.fiuba.tecnicas.tp1;
 
 import ar.fiuba.tecnicas.tp1.registro.Formateo;
-import ar.fiuba.tecnicas.tp1.registro.Registra;
+import ar.fiuba.tecnicas.tp1.registro.OperadorDeDispositivos;
 
-public class Fatal extends Logueo {
+
+public class Fatal extends Registrador {
 	
-	public Fatal(Registra registro, Formateo formato){
+	public Fatal(OperadorDeDispositivos registro, Formateo formato){
 		// Hay que implementar todos esto metodos
 		super(registro, formato);
 	}
