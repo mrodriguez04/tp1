@@ -41,19 +41,19 @@ public class Config {
 		
 	}
 	
-	String get_LogLevel(){
+	public String get_LogLevel(){
 		return prop.getProperty("logLevel");
 	}
 	
-	String get_ArchivoLog(){
+	public String get_ArchivoLog(){
 		return prop.getProperty("archivo");
 	}
 	
-	String get_Aplicacion(){
+	public String get_Aplicacion(){
 		return prop.getProperty("aplicacion");
 	}
 	
-	String get_Formateo(){
+	public String get_Formateo(){
 		return prop.getProperty("formato");
 	}
 	

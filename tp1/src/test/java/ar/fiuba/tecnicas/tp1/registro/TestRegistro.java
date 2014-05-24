@@ -62,12 +62,26 @@ public class TestRegistro extends TestCase {
 							
 		assertEquals ( oper.ld.size(),2);
 	}
-	public void testConfiguracion(){
+	public void testConfiguracionLogLevel(){
 		Config config = new Config("conf/config.properties");
-		config.toString();
 		//TODO config no tiene metodos para hacer pruebas, creo que solo tiene metodos de clase
-	
+		assertEquals(config.get_LogLevel(),"WARN");
 	}
+	public void testConfiguracionAplicacion(){
+		Config config = new Config("conf/config.properties");
+		assertEquals(config.get_Aplicacion(),"TP1");
+	}
+	public void testConfiguracionFormato(){
+		Config config = new Config("conf/config.properties");
+		assertEquals(config.get_Formateo(),"%d%p%t");
+	}
+	public void testConfiguracionPahArchivo(){
+		Config config = new Config("conf/config.properties");
+		assertEquals(config.get_ArchivoLog(),"/tmp/Aplicacion.log");
+	}
+	
+	
+	
 	
 
 }
