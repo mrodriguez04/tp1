@@ -1,7 +1,7 @@
 package ar.fiuba.tecnicas.tp1;
 import ar.fiuba.tecnicas.tp1.registro.*;
 
-public class Info extends Level{
+public class Info extends Logueo{
 	Registra reg;
 	Formateo fr;
 	
@@ -12,20 +12,4 @@ public class Info extends Level{
 	public void debug (String log){
 		// No hago nada
 	}
-	public void info(String log){
-		super.info(log);
-		
-	}
-	public void warn(String log){
-		super.warn(log);
-	}
-	public void error(String log){
-		super.error(log);
-	}
-	public void fatal(String log){
-		super.fatal(log);
-	}
-	
-	
-
 }
