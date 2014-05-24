@@ -31,8 +31,9 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testTiempo()
     {
-        assertTrue( true );
+      	
+        assertEquals( true, true );
     }
 }
