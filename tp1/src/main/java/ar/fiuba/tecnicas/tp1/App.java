@@ -19,7 +19,7 @@ public class App
     	reg.agregarDispositivo(disp2);
     	
         Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel());
-        Level nivel = new Info(reg, format);
+        Logueo nivel = new Info(reg, format);
         Logger log = new Logger(nivel);
        
         

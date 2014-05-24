@@ -1,22 +1,22 @@
 package ar.fiuba.tecnicas.tp1;
 
 public class Logger {
-	private Level level;
+	private Logueo logueo;
 	
-	public Logger(Level level1){
-		level = level1;
+	public Logger(Logueo level1){
+		logueo = level1;
 	}
 
 	public void debug(String log){
-		level.debug(log);
+		logueo.debug(log);
 	}
 	
 	public void info(String log){
-		level.info(log);
+		logueo.info(log);
 	}
 	
 	public void fatal(String log){
-		level.fatal(log);
+		logueo.fatal(log);
 	}
 	
 }
