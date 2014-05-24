@@ -15,20 +15,20 @@ public abstract class Registrador {
 		fr = formato;
 	}
 	public void debug(String log){
-		oper.Imprimir(fr.formateo(log, "DEBUG"));
+		oper.Imprimir(fr.armar(log, "DEBUG"));
 	}
 
 	public void info(String log){
 		// Hay que implementar estos metodos
-	    oper.Imprimir(fr.formateo(log, "INFO"));
+	    oper.Imprimir(fr.armar(log, "INFO"));
 	}
 	public void warn(String log){
-		oper.Imprimir(fr.formateo(log, "WARN"));
+		oper.Imprimir(fr.armar(log, "WARN"));
 	}
 	public void error(String log){
-		oper.Imprimir(fr.formateo(log, "ERROR"));
+		oper.Imprimir(fr.armar(log, "ERROR"));
 	}
 	public void fatal(String log){
-		oper.Imprimir(fr.formateo(log, "FATAL"));
+		oper.Imprimir(fr.armar(log, "FATAL"));
 	}
 }
