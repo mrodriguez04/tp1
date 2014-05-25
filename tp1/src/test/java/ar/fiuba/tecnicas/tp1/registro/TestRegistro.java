@@ -64,7 +64,6 @@ public class TestRegistro extends TestCase {
 	}
 	public void testConfiguracionLogLevel(){
 		Config config = new Config("conf/config.properties");
-		//TODO config no tiene metodos para hacer pruebas, creo que solo tiene metodos de clase
 		assertEquals(config.get_LogLevel(),"WARN");
 	}
 	public void testConfiguracionAplicacion(){
@@ -75,7 +74,7 @@ public class TestRegistro extends TestCase {
 		Config config = new Config("conf/config.properties");
 		assertEquals(config.get_Formateo(),"%d%p%t");
 	}
-	public void testConfiguracionPahArchivo(){
+	public void testConfiguracionPathArchivo(){
 		Config config = new Config("conf/config.properties");
 		assertEquals(config.get_ArchivoLog(),"/tmp/Aplicacion.log");
 	}
