@@ -28,12 +28,5 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testTiempo()
-    {
-      	
-        assertEquals( true, true );
-    }
+ 
 }
