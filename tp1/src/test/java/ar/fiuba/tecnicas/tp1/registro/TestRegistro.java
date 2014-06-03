@@ -10,7 +10,7 @@ public class TestRegistro extends TestCase {
 	public void testNivelesDiferentesMismoFormato() {
 
 			
-			Formateo n = new Formateo( "p", "INFO");
+			Formateo n = new Formateo( "p", "INFO", "Nicolas");
 			
 			Nivel nivel = new Nivel("INFO",n);
 			Nivel otroNivel = new Nivel("INFO",n);
@@ -72,7 +72,7 @@ public class TestRegistro extends TestCase {
 	}
 	public void testConfiguracionFormato(){
 		Config config = new Config("conf/config.properties");
-		assertEquals(config.get_Formateo(),"%d%p%t");
+		assertEquals(config.get_Formateo(),"%d%p%t%g");
 	}
 	public void testConfiguracionPathArchivo(){
 		Config config = new Config("conf/config.properties");

@@ -46,6 +46,9 @@ public class Archivo implements Dispositivo{
 		br.close();
 	}
 	
+	public String get_Path(){
+		return this.path;
+	}
 	
 
 }

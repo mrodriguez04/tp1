@@ -56,5 +56,9 @@ public class Config {
 	public String get_Formateo(){
 		return prop.getProperty("formato");
 	}
+	public String get_Loguer(){
+		return prop.getProperty("loguer");
+	}
+	
 	
 }
