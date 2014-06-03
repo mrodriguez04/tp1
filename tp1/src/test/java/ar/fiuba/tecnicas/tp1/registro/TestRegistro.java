@@ -78,7 +78,10 @@ public class TestRegistro extends TestCase {
 		Config config = new Config("conf/config.properties");
 		assertEquals(config.get_ArchivoLog(),"/tmp/Aplicacion.log");
 	}
-	
+	public void testUnloguer(){
+		Config config = new Config("conf/config.properties");
+		assertEquals(config.get_Loguer(),"Marcelo");
+	}
 	
 	
 	
