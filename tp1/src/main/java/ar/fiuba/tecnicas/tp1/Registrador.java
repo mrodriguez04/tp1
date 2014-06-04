@@ -14,6 +14,9 @@ public abstract class Registrador {
 		oper = registro;
 		fr = formato;
 	}
+	public void  trace(String log){
+		oper.Imprimir(fr.armar(log, "TRACE"));
+	}
 	public void debug(String log){
 		oper.Imprimir(fr.armar(log, "DEBUG"));
 	}

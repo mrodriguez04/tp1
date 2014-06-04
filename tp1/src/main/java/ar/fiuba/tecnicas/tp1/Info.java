@@ -8,6 +8,9 @@ public class Info extends Registrador{
 	public Info(OperadorDeDispositivos registro, Formateo formato){
 		super(registro, formato);
 	}
+	public void trace (String log){
+		// No hago nada
+	}
 	
 	public void debug (String log){
 		// No hago nada

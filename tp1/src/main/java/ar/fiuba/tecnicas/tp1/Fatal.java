@@ -10,6 +10,9 @@ public class Fatal extends Registrador {
 		// Hay que implementar todos esto metodos
 		super(registro, formato);
 	}
+	public void trace (String log){
+		// No hago nada
+	}
 	
 	public void debug (String log){
 		// No hago nada
