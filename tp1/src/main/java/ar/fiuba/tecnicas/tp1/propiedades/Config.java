@@ -1,15 +1,13 @@
 package ar.fiuba.tecnicas.tp1.propiedades;
 
-import java.io.FileInputStream;
+
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
 
 public class Config {
 
 	private String pathProperties = "conf/config.properties";
-//	private String pathXml = "conf/config.properties.xml";
+	private String pathXml =        "conf/config.properties.xml";
 	Propiedades prop;
 	
 
@@ -17,11 +15,15 @@ public class Config {
 		
 		
 		try {
-			 
 			prop = new ArchivoPropiedades(this.pathProperties);
 	 	 
 		} catch (IOException ex) {
-			ex.printStackTrace();
+			try {
+				prop = new XMLPropiedades(this.pathXml);
+			
+			} catch (Exception exp){
+				prop = new PropiedadesDefault();
+			}
 		}
 		
 	}

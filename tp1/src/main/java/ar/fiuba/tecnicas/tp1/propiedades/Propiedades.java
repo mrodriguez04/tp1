@@ -15,6 +15,6 @@ public abstract class Propiedades {
 		return "%d%p%t%g";
 	}
 	public String get_Loguer(){
-		return "default";
+		return "MECHA";
 	}
 }
