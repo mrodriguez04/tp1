@@ -1,7 +1,7 @@
 package ar.fiuba.tecnicas.tp1.registro;
 
 
-import ar.fiuba.tecnicas.tp1.Config;
+import ar.fiuba.tecnicas.tp1.propiedades.Config;
 import junit.framework.TestCase;
 
 public class TestRegistro extends TestCase {
@@ -63,23 +63,23 @@ public class TestRegistro extends TestCase {
 		assertEquals ( oper.ld.size(),2);
 	}
 	public void testConfiguracionLogLevel(){
-		Config config = new Config("conf/config.properties");
+		Config config = new Config();
 		assertEquals(config.get_LogLevel(),"WARN");
 	}
 	public void testConfiguracionAplicacion(){
-		Config config = new Config("conf/config.properties");
+		Config config = new Config();
 		assertEquals(config.get_Aplicacion(),"TP1");
 	}
 	public void testConfiguracionFormato(){
-		Config config = new Config("conf/config.properties");
+		Config config = new Config();
 		assertEquals(config.get_Formateo(),"%d%p%t%g");
 	}
 	public void testConfiguracionPathArchivo(){
-		Config config = new Config("conf/config.properties");
+		Config config = new Config();
 		assertEquals(config.get_ArchivoLog(),"/tmp/Aplicacion.log");
 	}
 	public void testUnloguer(){
-		Config config = new Config("conf/config.properties");
+		Config config = new Config();
 		assertEquals(config.get_Loguer(),"Marcelo");
 	}
 	

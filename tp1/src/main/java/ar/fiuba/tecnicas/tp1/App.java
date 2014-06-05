@@ -1,4 +1,5 @@
 package ar.fiuba.tecnicas.tp1;
+import ar.fiuba.tecnicas.tp1.propiedades.Config;
 import ar.fiuba.tecnicas.tp1.registro.*;
 
 /**
@@ -10,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
     	
-    	Config config = new Config("conf/config.properties");
+    	Config config = new Config();
     	// Armo los dispositivos en los cuales voy a imprimir los logs
     	OperadorDeDispositivos oper = new OperadorDeDispositivos();
     	Dispositivo disp1 = new Consola();

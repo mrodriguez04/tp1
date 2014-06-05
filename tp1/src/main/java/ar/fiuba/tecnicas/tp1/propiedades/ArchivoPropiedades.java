@@ -1,46 +1,37 @@
-package ar.fiuba.tecnicas.tp1;
+package ar.fiuba.tecnicas.tp1.propiedades;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-
-public class Config {
-
-	private String path;
+public class ArchivoPropiedades extends Propiedades{
 	private InputStream input;
-	Properties prop = new Properties();
+	Properties prop;
 	
-	public Config(String lugar){
-		this.path = lugar;
-		
+	public ArchivoPropiedades(String path) throws IOException {
 		try {
 			 
-			input = new FileInputStream(this.path);
-	 
-			// load a properties file
-			prop.load(input);
-	 
-			// get the property value and print it out
-			// System.out.println(prop.getProperty("database"));
-			// System.out.println(prop.getProperty("dbuser"));
-			// System.out.println(prop.getProperty("dbpassword"));
-	 
+			input = new FileInputStream(path);
+			prop = new Properties();
+	 		prop.load(input);
+	 	 
 		} catch (IOException ex) {
-			ex.printStackTrace();
+			// ex.printStackTrace();
+			throw ex;
+		
 		} finally {
 			if (input != null) {
 				try {
 					input.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					//e.printStackTrace();
+					throw e;
 				}
 			}
 		}
 		
 	}
-	
 	public String get_LogLevel(){
 		return prop.getProperty("logLevel");
 	}
@@ -59,6 +50,4 @@ public class Config {
 	public String get_Loguer(){
 		return prop.getProperty("loguer");
 	}
-	
-	
 }
