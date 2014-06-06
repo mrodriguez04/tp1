@@ -83,6 +83,7 @@ public class TestRegistro extends TestCase {
 		assertEquals(config.get_Loguer(),"Marcelo");
 	}
 	
+
 	
 	
 
