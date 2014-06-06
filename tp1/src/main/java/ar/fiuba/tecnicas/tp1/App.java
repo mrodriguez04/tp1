@@ -22,8 +22,10 @@ public class App
         Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
         Registrador nivel = new Info(oper, format);
         Logeable log = new Logeable(nivel);
-       
+     
+      
         
+                
         
         log.debug("No debe loguear DEBUG");
         log.info("Ver como loguea INFO");
