@@ -1,10 +1,10 @@
-package ar.fiuba.tecnicas.tp1;
+package ar.fiuba.tecnicas.tp1.logger;
 
 import ar.fiuba.tecnicas.tp1.registro.*;
 
-public class Warn extends Registrador {
-
-	public Warn (OperadorDeDispositivos registro, Formateo formato){
+public class Error extends Registrador {
+	
+	public Error (OperadorDeDispositivos registro, Formateo formato){
 		// Hay que implementar todos esto metodos
 		super(registro, formato);
 	}
@@ -17,5 +17,10 @@ public class Warn extends Registrador {
 	public void info(String log){
 		// No hago nada
 	}
-		
+	public void warn(String log){
+		// No hago nada
+	}
+
+	
+
 }

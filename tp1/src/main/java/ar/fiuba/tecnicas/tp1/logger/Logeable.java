@@ -1,4 +1,4 @@
-package ar.fiuba.tecnicas.tp1;
+package ar.fiuba.tecnicas.tp1.logger;
 
 import java.util.HashMap;
 import java.util.Map;

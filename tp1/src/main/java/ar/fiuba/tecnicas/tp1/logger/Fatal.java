@@ -1,4 +1,4 @@
-package ar.fiuba.tecnicas.tp1;
+package ar.fiuba.tecnicas.tp1.logger;
 
 import ar.fiuba.tecnicas.tp1.registro.Formateo;
 import ar.fiuba.tecnicas.tp1.registro.OperadorDeDispositivos;
