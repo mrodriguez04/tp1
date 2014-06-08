@@ -1,6 +1,7 @@
 package ar.fiuba.tecnicas.tp1;
 import ar.fiuba.tecnicas.tp1.propiedades.Config;
 import ar.fiuba.tecnicas.tp1.registro.*;
+import ar.fiuba.tecnicas.tp1.filtro.FiltroBasico;
 import ar.fiuba.tecnicas.tp1.logger.*;
 
 /**
@@ -13,8 +14,10 @@ public class App
     {
     	
     	Config config = new Config();
+    	boolean excluyente = true;
+    	FiltroBasico filtro = new FiltroBasico ("INFO",excluyente);
     	// Armo los dispositivos en los cuales voy a imprimir los logs
-    	OperadorDeDispositivos oper = new OperadorDeDispositivos();
+    	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
     	Dispositivo disp1 = new Consola();
     	Dispositivo disp2 = new Archivo(config.get_ArchivoLog());
     	oper.agregarDispositivo(disp1);
