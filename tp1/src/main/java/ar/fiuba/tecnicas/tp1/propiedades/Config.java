@@ -27,7 +27,19 @@ public class Config {
 		}
 		
 	}
-
+	public Config(String path){
+		/**
+		 * Sobrecargo el constructor para poder instanciar con un archivo
+		 * @return Retorna el config que sa pasa por parametro o el default
+		 * @exception No retorna excepcion ya que retorna el defalut
+		 */
+		try {
+			prop = new ArchivoPropiedades(path);
+		} catch (Exception exp){
+			prop = new PropiedadesDefault();
+		}
+		
+	}
 	public String get_LogLevel(){
 		return prop.get_LogLevel();
 	}

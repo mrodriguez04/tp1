@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tests tipo="1">
+	<Config>
+			<LogLevel>INFO</LogLevel>
+			<Archivo>/tmp/AplicacionXML.log</Archivo>
+			<Formato>%d%p%t%g</Formato>
+			<Aplicacion>TP2</Aplicacion>
+			<Loguer>NICO</Loguer>
+	</Config>
