@@ -49,6 +49,7 @@ public class Logeable {
 	
 	public Logeable(Registrador level1){
 		registra = level1;
+		this.nombrelog="loguer default";
 	}
 
 	public void debug(String log){
