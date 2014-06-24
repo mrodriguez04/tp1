@@ -26,8 +26,11 @@ public class App
         Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
         Registrador nivel = new Info(oper, format);
         Logeable log = new Logeable(nivel);
-     
-      
+     	/*
+        Logeable log;
+        BuilderLog builder = new BuilderLog();
+        log = builder.get_Log();
+        */
         
                 
         
