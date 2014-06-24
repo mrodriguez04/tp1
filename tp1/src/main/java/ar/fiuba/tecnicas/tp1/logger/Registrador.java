@@ -6,6 +6,7 @@ import ar.fiuba.tecnicas.tp1.registro.OperadorDeDispositivos;
 
 public abstract class Registrador {
 	
+	
 
 	OperadorDeDispositivos oper;
 	Formateo fr;

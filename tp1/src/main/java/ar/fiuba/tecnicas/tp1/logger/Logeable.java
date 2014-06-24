@@ -11,6 +11,7 @@ import ar.fiuba.tecnicas.tp1.registro.OperadorDeDispositivos;
 
 public class Logeable {
 	
+	
 	private Registrador registra;
 	String nombrelog;
 	
