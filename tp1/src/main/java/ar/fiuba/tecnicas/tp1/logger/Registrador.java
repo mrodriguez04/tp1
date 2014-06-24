@@ -34,4 +34,9 @@ public abstract class Registrador {
 	public void fatal(String log){
 		oper.Imprimir(fr.armar(log, "FATAL"));
 	}
+	public void excepcion(Exception e){
+		
+		oper.Imprimir(e.getMessage());
+	}
+	
 }

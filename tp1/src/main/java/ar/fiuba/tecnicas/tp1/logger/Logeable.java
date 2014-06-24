@@ -51,17 +51,47 @@ public class Logeable {
 		registra = level1;
 		this.nombrelog="loguer default";
 	}
-
+	public void trace(String log){
+		registra.trace(log);
+	}
 	public void debug(String log){
 		registra.debug(log);
 	}
-	
 	public void info(String log){
 		registra.info(log);
 	}
-	
+	public void warn(String log){
+		registra.warn(log);
+	}
+	public void error(String log){
+		registra.error(log);
+	}
 	public void fatal(String log){
 		registra.fatal(log);
+	}
+	public void trace(String log, Exception e){
+		this.trace(log);
+		registra.excepcion(e);
+	}
+	public void debug(String log, Exception e){
+		this.debug(log);
+		registra.excepcion(e);
+	}
+	public void info(String log, Exception e){
+		registra.info(log);
+		registra.excepcion(e);
+	}
+	public void warn(String log, Exception e){
+		registra.warn(log);
+		registra.excepcion(e);
+	}
+	public void error(String log, Exception e){
+		registra.error(log);
+		registra.excepcion(e);
+	}
+	public void fatal(String log, Exception e){
+		registra.fatal(log);
+		registra.excepcion(e);
 	}
 	
 	public String get_Nombre(){
