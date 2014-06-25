@@ -33,13 +33,21 @@ public class Config {
 		 * @return Retorna el config que sa pasa por parametro o el default
 		 * @exception No retorna excepcion ya que retorna el defalut
 		 */
-		try {
-			prop = new ArchivoPropiedades(path);
-		} catch (Exception exp){
+		if (path.contains("xml")){
+			try {
+				prop = new XMLPropiedades(path);
+			} catch (Exception exp){
 			prop = new PropiedadesDefault();
-		}
-		
+			}
+		}else
+			try {
+				prop = new ArchivoPropiedades(path);
+			} catch (Exception exp){
+			prop = new PropiedadesDefault();
+			}
+			
 	}
+	
 	public String get_LogLevel(){
 		return prop.get_LogLevel();
 	}
