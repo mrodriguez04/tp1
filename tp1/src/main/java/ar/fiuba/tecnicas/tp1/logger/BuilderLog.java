@@ -1,5 +1,6 @@
 package ar.fiuba.tecnicas.tp1.logger;
 
+import ar.fiuba.tecnicas.tp1.filtro.FiltroBasico;
 import ar.fiuba.tecnicas.tp1.propiedades.Config;
 import ar.fiuba.tecnicas.tp1.registro.Archivo;
 import ar.fiuba.tecnicas.tp1.registro.Consola;
@@ -20,13 +21,16 @@ public class BuilderLog {
 	}
 	
 	private Logeable Armador(Config config){
-		OperadorDeDispositivos oper = new OperadorDeDispositivos();
+		// boolean excluyente = true;
+    	FiltroBasico filtro = new FiltroBasico ();
+    	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
+		//OperadorDeDispositivos oper = new OperadorDeDispositivos();
     	Dispositivo disp1 = new Consola();
     	Dispositivo disp2 = new Archivo(config.get_ArchivoLog());
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
     	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
-        Registrador nivel = new Info(oper, format);
+        Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel);
 		return log;
 	}

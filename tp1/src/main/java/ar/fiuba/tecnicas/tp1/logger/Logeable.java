@@ -24,11 +24,44 @@ public class Logeable {
     	OperadorDeDispositivos oper = new OperadorDeDispositivos();
     	Dispositivo disp1 = new Consola();
     	oper.agregarDispositivo(disp1);
-    	this.nombrelog="loguer default";
+    	this.nombrelog=config.get_Loguer();
+    	instances.put(config.get_Loguer(), this);
     	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
-        Registrador nivel = new Info(oper, format);
+        Registrador nivel = new Debug(oper, format);
         this.registra=nivel;
     }
+   /*
+    public Logeable(String nombre){
+    	Config config = new Config();
+    	OperadorDeDispositivos oper = new OperadorDeDispositivos();
+    	Dispositivo disp1 = new Consola();
+    	oper.agregarDispositivo(disp1);
+    	this.nombrelog=nombre;
+    	instances.put(config.get_Loguer(), this);
+    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), nombre);
+        Registrador nivel = new Debug(oper, format);
+        this.registra=nivel;
+    }
+    public Logeable(String nombre, String pathConfig){
+    	Config config = new Config(pathConfig);
+    	OperadorDeDispositivos oper = new OperadorDeDispositivos();
+    	Dispositivo disp1 = new Consola();
+    	oper.agregarDispositivo(disp1);
+    	this.nombrelog=nombre;
+    	instances.put(config.get_Loguer(), this);
+    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), nombre);
+        Registrador nivel = new Debug(oper, format);
+        this.registra=nivel;
+    }
+    
+    
+    public static Logeable getInstance(String nombre){
+    	Logeable instance = new Logeable(nombre);
+    	instance.cambiar_Nombre(nombre);
+    	return instance;
+    }
+    */
+    
  
     public static synchronized  Logeable getInstance(String key) {
  
@@ -45,7 +78,12 @@ public class Logeable {
  
         return instance;
     }
-	
+	public Logeable(Registrador level1, String nombre){
+		registra = level1;
+		this.nombrelog=nombre;
+		instances.put(nombre, this);
+		
+	}
 	
 	
 	public Logeable(Registrador level1){

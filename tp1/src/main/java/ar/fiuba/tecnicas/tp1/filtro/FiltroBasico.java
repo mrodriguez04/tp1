@@ -26,7 +26,7 @@ public class FiltroBasico {
 
 	public FiltroBasico (){
 			filtro = " ";
-			excluyente= true;
+			excluyente= false;
 	}
 	
 	public FiltroBasico (String filtradopor,boolean excluyente){

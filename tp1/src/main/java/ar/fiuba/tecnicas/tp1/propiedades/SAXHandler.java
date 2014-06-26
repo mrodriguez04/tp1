@@ -17,39 +17,48 @@ public class SAXHandler extends DefaultHandler {
 		  public void startElement(String uri, String localName, 
 		                           String qName, Attributes attributes) 
 		                           throws SAXException {
-
+			content = "";
 		    switch(qName){
-		      //Create a new Employee object when the start tag is found
-		    case "LogLevel":
-		    	 prop.set_logLevel(attributes.getValue("LogLevel"));
-		    	break;
-		      case "Aplicacion":
-		        prop.set_Aplicacion(attributes.getValue("Aplicacion"));
-		        break;
-		      case "Formato":
-		    	prop.set_Formateo(attributes.getValue("Formato"));
-		    	break;
-		      case "Archivo":
-		    	prop.set_ArchivoLog(attributes.getValue("Archivo"));
-		    	break;
-		      case "Loger":
-			    prop.set_Logger(attributes.getValue("Loger"));
-			       break;
+		      //Create a new Conf object when the start tag is found
+		    		
+		    case "Tests":
+		    	   	break;
+		      case "Config":
+		             break;
+		      
 		    
 		    }
-		    content = "";
+		  
 		  }
 
 		  // @Override
-		 /* public void endElement(String uri, String localName, 
+		 public void endElement(String uri, String localName, 
 		                         String qName) throws SAXException {
-		   switch(qName){
+			 
+			 switch(qName){
 		     //Add the employee to list once end tag is found
-		     
+						   case "LogLevel":
+						    	 prop.set_logLevel(content);
+						    	break;
+						   case "Aplicacion":
+						        prop.set_Aplicacion(content);
+						        break;
+						   case "Formato":
+						    	prop.set_Formateo(content);
+						    	
+						    	break;
+						   case "Archivo":
+						    	prop.set_ArchivoLog(content);
+						    	break;
+						   case "Loguer":
+							    prop.set_Logger(content);
+							   
+							    break;
 		     //For all other end tags the employee has to be updated.
 
 		   }
-		  }*/
+		   content ="";
+		  }
 
 		  @Override
 		  public void characters(char[] ch, int start, int length) 
