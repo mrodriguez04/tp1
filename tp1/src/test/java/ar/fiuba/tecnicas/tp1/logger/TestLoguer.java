@@ -3,6 +3,8 @@ package ar.fiuba.tecnicas.tp1.logger;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.impl.LogFactory;
 
 import ar.fiuba.tecnicas.tp1.filtro.FiltroBasico;
 import ar.fiuba.tecnicas.tp1.propiedades.Config;
@@ -62,6 +64,22 @@ public class TestLoguer {
 		Logeable logger2 = Logeable.getInstance("75");
 		assertEquals(logger2.get_Nombre(), "Juan");
 		
+	}
+	
+	@Test
+	public void testTraceDesactivado (){
+		LogFactory factory = new LogFactory();
+		final Logger log3 = factory.getLogger("NICO");
+		
+		assertEquals(log3.isTraceEnabled(),false);
+	}
+	
+	@Test
+	public void testWarnDesactivado (){
+		LogFactory factory = new LogFactory();
+		final Logger log3 = factory.getLogger("NICO");
+		log3.warn("Peligro");
+		assertEquals(log3.isWarnEnabled(),false);
 	}
 
 }
