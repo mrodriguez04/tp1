@@ -119,6 +119,8 @@ public class LogAdapter implements Logger{
 		log.error(arg1);
 	}
 
+	
+	
 	public String getName() {
 		// TODO Auto-generated method stub
 		return log.get_Nombre();
