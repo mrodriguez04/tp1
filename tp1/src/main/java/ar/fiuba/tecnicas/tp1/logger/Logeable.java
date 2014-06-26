@@ -21,12 +21,13 @@ public class Logeable {
         // Constructor por default, en una consola con el formato 
     	// que tenga el archivo de configuracion en nivel INFO
     	Config config = new Config();
+    	boolean titulo = false;
     	OperadorDeDispositivos oper = new OperadorDeDispositivos();
     	Dispositivo disp1 = new Consola();
     	oper.agregarDispositivo(disp1);
     	this.nombrelog=config.get_Loguer();
     	instances.put(config.get_Loguer(), this);
-    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
+    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo);
         Registrador nivel = new Debug(oper, format);
         this.registra=nivel;
     }

@@ -10,10 +10,10 @@ public class TestRegistro extends TestCase {
 	public void testNivelesDiferentesMismoFormato() {
 
 			
-			Formateo n = new Formateo( "p", "INFO", "Nicolas");
+			Formateo n = new Formateo( "p", "INFO", "Nicolas", false);
 			
-			Nivel nivel = new Nivel("INFO",n);
-			Nivel otroNivel = new Nivel("INFO",n);
+			Nivel nivel = new Nivel("INFO",n, false);
+			Nivel otroNivel = new Nivel("INFO",n, false);
 			
 			StringBuilder dato = new StringBuilder("INFO");
 									
@@ -21,8 +21,8 @@ public class TestRegistro extends TestCase {
 		}		
 	public void testHilosDiferentesConMismoProceso() {
 		
-			Hilo hilo= new Hilo();
-			Hilo otroHilo = new Hilo();
+			Hilo hilo= new Hilo(false);
+			Hilo otroHilo = new Hilo(false);
 		
 			StringBuilder dato = new StringBuilder("Proceso");
 									
@@ -30,8 +30,8 @@ public class TestRegistro extends TestCase {
 		}
 	public void testTiemposDiferentesConElMismoDato() {
 		
-			Tiempo tiempo= new Tiempo();
-			Tiempo otroTiempo = new Tiempo();
+			Tiempo tiempo= new Tiempo(false);
+			Tiempo otroTiempo = new Tiempo(false);
 	
 			StringBuilder dato = new StringBuilder("23:56");
 								

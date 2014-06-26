@@ -21,7 +21,7 @@ public class BuilderLog {
 	}
 	
 	private Logeable Armador(Config config){
-		// boolean excluyente = true;
+		boolean titulo = true;
     	FiltroBasico filtro = new FiltroBasico ();
     	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
 		//OperadorDeDispositivos oper = new OperadorDeDispositivos();
@@ -29,7 +29,7 @@ public class BuilderLog {
     	Dispositivo disp2 = new Archivo(config.get_ArchivoLog());
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
-    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
+    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo);
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel, config.get_Loguer());
 		return log;

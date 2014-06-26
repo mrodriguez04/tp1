@@ -10,24 +10,26 @@ public class Formateo{
 	Forma nivel;
 	Forma nombre_loguer;
 	String tipo;
-	public Formateo(String variables, String nivelLog, String nombre){
+	boolean titulo;
+	public Formateo(String variables, String nivelLog, String nombre, boolean titulo){
 		lf = new ArrayList<Forma>();
+		this.titulo = titulo;
 		var = variables.split("%");
 		for (String v : var){
 			if ( v.equals("d")){
-				fecha = new Tiempo();
+				fecha = new Tiempo(titulo);
 				lf.add(fecha);
 			}else if ( v.equals("t")) {
-				thread = new Hilo();
+				thread = new Hilo(titulo);
 				lf.add(thread);
 			}else if ( v.equals("p")){
-				nivel = new Nivel(nivelLog, this);
+				nivel = new Nivel(nivelLog, this, titulo);
 				lf.add(nivel);
 			}else if ( v.equals("g")){
-				nombre_loguer = new Loguer(nombre, this);
+				nombre_loguer = new Loguer(nombre, this, titulo);
 				lf.add(nombre_loguer);
 			}else if ( v.equals("F")){
-				nombre_loguer = new Loguer(nombre, this);
+				nombre_loguer = new Loguer(nombre, this, titulo);
 				lf.add(nombre_loguer);
 			}
 			
@@ -41,8 +43,9 @@ public class Formateo{
 		linea = new StringBuilder();
 		for (Forma v : lf){
 			v.concatena(linea);
-			linea.append(" ");
+			linea.append(", ");
 		}
+		if (titulo) linea.append("mensaje: ");
 		retorno = linea.append(log).toString();
 		return retorno;
 	}

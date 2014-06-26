@@ -16,6 +16,7 @@ public class AppLogError
     	
     	Config config = new Config();
     	boolean excluyente = false;
+    	boolean titulo = false;
     	FiltroBasico filtro = new FiltroBasico (" ",excluyente);
     	// Armo los dispositivos en los cuales voy a imprimir los logs
     	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
@@ -24,7 +25,7 @@ public class AppLogError
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
     	
-        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
+        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(),titulo);
         Registrador nivel = new Error(oper, format);
         Logeable log = new Logeable(nivel);
            

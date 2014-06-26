@@ -1,8 +1,6 @@
 package ar.fiuba.tecnicas.tp1;
 import ar.fiuba.tecnicas.tp1.propiedades.Config;
-import ar.fiuba.tecnicas.tp1.registro.*;
-import ar.fiuba.tecnicas.tp1.filtro.FiltroBasico;
-import ar.fiuba.tecnicas.tp1.logger.*;
+
 
 /**
  * Hello world!

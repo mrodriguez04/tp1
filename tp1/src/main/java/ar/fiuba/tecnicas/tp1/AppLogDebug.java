@@ -3,7 +3,7 @@ import ar.fiuba.tecnicas.tp1.propiedades.Config;
 import ar.fiuba.tecnicas.tp1.registro.*;
 import ar.fiuba.tecnicas.tp1.filtro.FiltroBasico;
 import ar.fiuba.tecnicas.tp1.logger.*;
-import ar.fiuba.tecnicas.tp1.logger.Error;
+
 
 /**
  * Hello world!
@@ -16,6 +16,7 @@ public class AppLogDebug
     	
     	Config config = new Config();
     	boolean excluyente = false;
+    	boolean titulo = false;
     	FiltroBasico filtro = new FiltroBasico (" ",excluyente);
     	// Armo los dispositivos en los cuales voy a imprimir los logs
     	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
@@ -24,7 +25,7 @@ public class AppLogDebug
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
     	
-        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
+        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo);
         Registrador nivel = new Debug(oper, format);
         Logeable log = new Logeable(nivel);
            
