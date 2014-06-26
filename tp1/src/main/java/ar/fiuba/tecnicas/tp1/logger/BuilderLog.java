@@ -31,7 +31,7 @@ public class BuilderLog {
     	oper.agregarDispositivo(disp2);
     	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
         Registrador nivel = new Trace(oper, format);
-        Logeable log = new Logeable(nivel);
+        Logeable log = new Logeable(nivel, config.get_Loguer());
 		return log;
 	}
 	

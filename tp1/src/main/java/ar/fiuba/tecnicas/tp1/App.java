@@ -1,8 +1,9 @@
 package ar.fiuba.tecnicas.tp1;
-import ar.fiuba.tecnicas.tp1.propiedades.Config;
-import ar.fiuba.tecnicas.tp1.registro.*;
-import ar.fiuba.tecnicas.tp1.filtro.FiltroBasico;
+
 import ar.fiuba.tecnicas.tp1.logger.*;
+
+import org.slf4j.Logger;
+import org.slf4j.impl.*;
 
 /**
  * Hello world!
@@ -12,32 +13,29 @@ public class App
 {
     public static void main( String[] args )
     {
-    	
-    	Config config = new Config();
-    	boolean excluyente = true;
-    	FiltroBasico filtro = new FiltroBasico ("INFO",excluyente);
-    	// Armo los dispositivos en los cuales voy a imprimir los logs
-    	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
-    	Dispositivo disp1 = new Consola();
-    	Dispositivo disp2 = new Archivo(config.get_ArchivoLog());
-    	oper.agregarDispositivo(disp1);
-    	oper.agregarDispositivo(disp2);
-    	
-        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer());
-        Registrador nivel = new Info(oper, format);
-        Logeable log = new Logeable(nivel);
-     	/*
-        Logeable log;
+    	// StaticLoggerBinder binderFactory;
+    	LogFactory factory = new LogFactory();
+    	Logeable log_nuestro1;
+    	Logeable log_nuestro2;
         BuilderLog builder = new BuilderLog();
-        log = builder.get_Log();
-        */
+        log_nuestro1 = builder.get_Log();
+        log_nuestro2 = builder.get_Log("conf/conf1/config.properties");
         
+        final Logger log2 = factory.getLogger("Marcelo");  
+        final Logger log3 = factory.getLogger("NICO");
                 
-        
-        log.debug("No debe loguear DEBUG");
-        log.info("Ver como loguea INFO");
-        log.fatal("Ver como loguea FATAL");
-        
-        
+        log_nuestro1.debug("No debe loguear DEBUG");
+        log_nuestro1.info("Ver como loguea INFO");
+        log_nuestro1.fatal("Ver como loguea FATAL");
+        log_nuestro2.debug("No debe loguear DEBUG");
+        log_nuestro2.info("Ver como loguea INFO");
+        log_nuestro2.fatal("Ver como loguea FATAL");
+      //   log.fatal(log.get_Nombre());
+        log2.debug("No debe loguea DEBUGGG");
+        log2.info("Ver como loguea INFOOOOOO");
+        log2.error("Ver como loguea un Erroor");
+        log3.debug("No debe loguea DEBUGGG");
+        log3.info("Ver como loguea INFOOOOOO");
+        log3.error("Ver como loguea un Erroor");
     }
 }
