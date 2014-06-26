@@ -19,7 +19,7 @@ public class TestLoguer {
 		
 		Logeable loguer = Logeable.getInstance("25");
 		
-		assertEquals(loguer.get_Nombre(), "loguer default");
+		assertEquals(loguer.get_Nombre(), "NICO");
 		
 	}
 	

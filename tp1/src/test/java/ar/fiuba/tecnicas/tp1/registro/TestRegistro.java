@@ -64,11 +64,11 @@ public class TestRegistro extends TestCase {
 	}
 	public void testConfiguracionLogLevel(){
 		Config config = new Config();
-		assertEquals(config.get_LogLevel(),"WARN");
+		assertEquals(config.get_LogLevel(),"INFO");
 	}
 	public void testConfiguracionAplicacion(){
 		Config config = new Config();
-		assertEquals(config.get_Aplicacion(),"TP1");
+		assertEquals(config.get_Aplicacion(),"TP2");
 	}
 	public void testConfiguracionFormato(){
 		Config config = new Config();
@@ -76,11 +76,11 @@ public class TestRegistro extends TestCase {
 	}
 	public void testConfiguracionPathArchivo(){
 		Config config = new Config();
-		assertEquals(config.get_ArchivoLog(),"/tmp/Aplicacion.log");
+		assertEquals(config.get_ArchivoLog(),"/tmp/AplicacionXML.log");
 	}
 	public void testUnloguer(){
 		Config config = new Config();
-		assertEquals(config.get_Loguer(),"Marcelo");
+		assertEquals(config.get_Loguer(),"NICO");
 	}
 	
 

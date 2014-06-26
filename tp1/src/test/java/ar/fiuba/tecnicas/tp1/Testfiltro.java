@@ -58,7 +58,7 @@ public class Testfiltro {
 	public void testFiltroConstructorVacio(){
 		
 		FiltroBasico filtroBasico = new FiltroBasico();
-		assertEquals(filtroBasico.isExcluyente(), true);
+		assertEquals(filtroBasico.isExcluyente(), false);
 	}
 	
 	@Test
