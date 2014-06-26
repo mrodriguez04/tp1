@@ -121,7 +121,7 @@ public class LogAdapter implements Logger{
 
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return log.get_Nombre();
 	}
 
 	public void info(String arg0) {
