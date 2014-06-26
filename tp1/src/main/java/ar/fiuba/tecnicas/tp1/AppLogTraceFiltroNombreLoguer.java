@@ -13,9 +13,9 @@ public class AppLogTraceFiltroNombreLoguer
     public static void main( String[] args )
     {
     	
-    	Config config = new Config();
+    	Config config = new Config("conf/conf1/config.properties");
     	boolean excluyente = false;
-    	FiltroBasico filtro = new FiltroBasico ("Marcelo",excluyente);
+    	FiltroBasico filtro = new FiltroBasico (" ",excluyente);
     	// Armo los dispositivos en los cuales voy a imprimir los logs
     	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
     	Dispositivo disp1 = new Consola();
@@ -27,7 +27,7 @@ public class AppLogTraceFiltroNombreLoguer
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel);
         
-        Config config2 = new Config("conf/conf1/config.properties");
+        Config config2 = new Config("conf/config.properties.xml");
         Dispositivo disp3 = new Consola();
         OperadorDeDispositivos oper2 = new OperadorDeDispositivos(filtro);
         oper2.agregarDispositivo(disp3);
