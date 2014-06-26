@@ -81,5 +81,13 @@ public class TestLoguer {
 		log3.warn("Peligro");
 		assertEquals(log3.isWarnEnabled(),false);
 	}
+	
+	@Test
+	public void testNombreLoguer (){
+		LogFactory factory = new LogFactory();
+		final Logger log3 = factory.getLogger("NICO");
+		
+		assertEquals(log3.getName(),"NICO");
+	}
 
 }
