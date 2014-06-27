@@ -10,6 +10,7 @@ public class XMLPropiedades extends Propiedades {
 	String logger;
 	String filtro;
 	boolean tipoFiltro;
+	boolean fjson;
 	
 	public XMLPropiedades(String path) throws Exception {
 		ParserXML parseado = new ParserXML();
@@ -52,7 +53,13 @@ public class XMLPropiedades extends Propiedades {
 	public void set_Filtro(String n){
 		this.filtro = n;
 	}
-	
+	public void set_fjson(String n){
+		if(n.contains("false")){
+			this.fjson = false;
+		}else{
+			this.fjson = true;
+		}
+	}
 	
 	public String get_LogLevel(){
 		return this.logLevel;
@@ -74,5 +81,8 @@ public class XMLPropiedades extends Propiedades {
 	}
 	public String get_Filtro(){
 		return this.filtro;
+	}
+	public boolean get_fjson(){
+		return this.fjson;
 	}
 }

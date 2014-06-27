@@ -50,4 +50,23 @@ public class ArchivoPropiedades extends Propiedades{
 	public String get_Loguer(){
 		return prop.getProperty("loguer");
 	}
+	public boolean get_tipoFiltro(){
+		String fjson = prop.getProperty("TipoFiltro");
+		if(fjson.contains("D")){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	public String get_Filtro(){
+		return prop.getProperty("Filtro");
+	}
+	public boolean get_fjson(){
+		String fjson = prop.getProperty("FJSON");
+		if(fjson.contains("false")){
+			return false;
+		}else{
+			return true;
+		}
+	}
 }

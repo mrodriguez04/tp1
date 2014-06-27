@@ -23,4 +23,10 @@ public abstract class Propiedades {
 	public boolean get_TipoFiltro(){
 		return false;
 	}
+	public boolean get_fjson() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
 }

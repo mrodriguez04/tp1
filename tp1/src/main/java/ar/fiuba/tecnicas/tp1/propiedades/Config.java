@@ -10,6 +10,7 @@ public class Config {
 	private String pathXml =        "conf/config.properties.xml";
 	Propiedades prop;
 	
+	
 
 	public Config(){
 		
@@ -71,6 +72,9 @@ public class Config {
 	}
 	public String get_filtro(){
 		return prop.get_Filtro();
+	}
+	public boolean get_fjson(){
+		return prop.get_fjson();
 	}
 	
 	
