@@ -26,6 +26,8 @@ public class App
         final Logger logger2 = factory.getLogger("logger2");
         final Logger logger3 = factory.getLogger("logger3");
         
+        
+        
         logger1.info("Helllo Word");
         logger1.info("Hola Mundo");
         logger1.info("Hallo Welt");

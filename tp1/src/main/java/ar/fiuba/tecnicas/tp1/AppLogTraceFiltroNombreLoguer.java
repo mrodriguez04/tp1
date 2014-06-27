@@ -24,7 +24,7 @@ public class AppLogTraceFiltroNombreLoguer
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
     	
-        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo);
+        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo, config.get_ArchivoLog());
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel);
         
@@ -32,7 +32,7 @@ public class AppLogTraceFiltroNombreLoguer
         Dispositivo disp3 = new Consola();
         OperadorDeDispositivos oper2 = new OperadorDeDispositivos(filtro);
         oper2.agregarDispositivo(disp3);
-        Formateo format2 = new Formateo(config2.get_Formateo(), config2.get_LogLevel(), config2.get_Loguer(), titulo);
+        Formateo format2 = new Formateo(config2.get_Formateo(), config2.get_LogLevel(), config2.get_Loguer(), titulo, config.get_ArchivoLog());
         Registrador nivel2 = new Trace (oper2, format2);
         Logeable log2 = new Logeable (nivel2);
            

@@ -10,7 +10,7 @@ public class TestRegistro extends TestCase {
 	public void testNivelesDiferentesMismoFormato() {
 
 			
-			Formateo n = new Formateo( "p", "INFO", "Nicolas", false);
+			Formateo n = new Formateo( "p", "INFO", "Nicolas", false, "/tmp/default.log");
 			
 			Nivel nivel = new Nivel("INFO",n, false);
 			Nivel otroNivel = new Nivel("INFO",n, false);

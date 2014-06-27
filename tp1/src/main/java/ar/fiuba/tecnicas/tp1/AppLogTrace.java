@@ -24,7 +24,7 @@ public class AppLogTrace
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
     	
-        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo);
+        Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo, config.get_ArchivoLog());
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel);
            

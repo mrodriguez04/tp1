@@ -9,9 +9,10 @@ public class Formateo{
 	Forma thread;
 	Forma nivel;
 	Forma nombre_loguer;
+	Forma nombre_archivo;
 	String tipo;
 	boolean titulo;
-	public Formateo(String variables, String nivelLog, String nombre, boolean titulo){
+	public Formateo(String variables, String nivelLog, String nombre, boolean titulo, String path){
 		lf = new ArrayList<Forma>();
 		this.titulo = titulo;
 		var = variables.split("%");
@@ -29,8 +30,8 @@ public class Formateo{
 				nombre_loguer = new Loguer(nombre, this, titulo);
 				lf.add(nombre_loguer);
 			}else if ( v.equals("F")){
-				nombre_loguer = new Loguer(nombre, this, titulo);
-				lf.add(nombre_loguer);
+				nombre_archivo = new NombreArchivo(path, titulo);
+				lf.add(nombre_archivo);
 			}
 			
 		}

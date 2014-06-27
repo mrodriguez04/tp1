@@ -12,15 +12,16 @@ public class BuilderLog {
 	Config config;
 	
 	public Logeable get_Log(){
+		String standard = "default";
 		config = new Config();
-    	return Armador(config);
+    	return Armador(config, standard);
 	}
 	public Logeable get_Log(String path){
 		config = new Config(path);
-		return Armador(config);
+		return Armador(config, path);
 	}
 	
-	private Logeable Armador(Config config){
+	private Logeable Armador(Config config, String path){
 		boolean titulo;
 		FiltroBasico filtro;
 		if (config.get_tipoFiltro()){
@@ -36,7 +37,7 @@ public class BuilderLog {
     	Dispositivo disp2 = new Archivo(config.get_ArchivoLog());
     	oper.agregarDispositivo(disp1);
     	oper.agregarDispositivo(disp2);
-    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo);
+    	Formateo format = new Formateo(config.get_Formateo(), config.get_LogLevel(), config.get_Loguer(), titulo, config.get_ArchivoLog());
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel, config.get_Loguer());
 		return log;

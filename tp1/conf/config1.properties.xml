@@ -3,7 +3,7 @@
 	<Config>
 			<LogLevel>INFO</LogLevel>
 			<Archivo>/tmp/AplicacionXML2.log</Archivo>
-			<Formato>%d%p%t%g</Formato>
+			<Formato>%d%p%t%F%g</Formato>
 			<Aplicacion>TP2</Aplicacion>
 			<Loguer>logger1</Loguer>
 			<Filtro>tp</Filtro>
