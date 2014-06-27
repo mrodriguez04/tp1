@@ -66,6 +66,12 @@ public class Config {
 	public String get_Loguer(){
 		return prop.get_Loguer();
 	}
+	public boolean get_tipoFiltro(){
+		return prop.get_TipoFiltro();
+	}
+	public String get_filtro(){
+		return prop.get_Filtro();
+	}
 	
 	
 }

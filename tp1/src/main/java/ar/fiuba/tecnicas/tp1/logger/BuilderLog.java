@@ -21,8 +21,14 @@ public class BuilderLog {
 	}
 	
 	private Logeable Armador(Config config){
-		boolean titulo = true;
-    	FiltroBasico filtro = new FiltroBasico ();
+		boolean titulo = false;
+		FiltroBasico filtro;
+		if (config.get_tipoFiltro()){
+				filtro = new FiltroBasico (config.get_filtro(), config.get_tipoFiltro());
+		}else {
+				filtro = new FiltroBasico();
+		}
+    	
     	OperadorDeDispositivos oper = new OperadorDeDispositivos(filtro);
 		//OperadorDeDispositivos oper = new OperadorDeDispositivos();
     	Dispositivo disp1 = new Consola();

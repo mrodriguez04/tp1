@@ -52,8 +52,13 @@ public class SAXHandler extends DefaultHandler {
 						    	break;
 						   case "Loguer":
 							    prop.set_Logger(content);
-							   
 							    break;
+						   case "Filtro":
+							     prop.set_Filtro(content);
+						         break;
+						   case "TipoFiltro":
+							   	 prop.set_TipoFiltro(content);
+							   	 break;
 		     //For all other end tags the employee has to be updated.
 
 		   }

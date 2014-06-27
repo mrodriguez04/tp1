@@ -35,9 +35,13 @@ public abstract class Registrador {
 	public void fatal(String log){
 		oper.Imprimir(fr.armar(log, "FATAL"));
 	}
-	public void excepcion(Exception e){
+	public void excepcion(Throwable e){
+		oper.ImprimirExcepcion(e.getMessage());
+		StackTraceElement[] stack = e.getStackTrace();
+		for( int i = 0; i < stack.length; i++){
+			oper.ImprimirExcepcion(stack[i].toString());
+		}
 		
-		oper.Imprimir(e.getMessage());
 	}
 	
 }

@@ -17,4 +17,10 @@ public abstract class Propiedades {
 	public String get_Loguer(){
 		return "MECHA";
 	}
+	public String get_Filtro(){
+		return " ";
+	}
+	public boolean get_TipoFiltro(){
+		return false;
+	}
 }

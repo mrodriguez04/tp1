@@ -8,6 +8,8 @@ public class XMLPropiedades extends Propiedades {
 	String aplicacion;
 	String formateo;
 	String logger;
+	String filtro;
+	boolean tipoFiltro;
 	
 	public XMLPropiedades(String path) throws Exception {
 		ParserXML parseado = new ParserXML();
@@ -39,6 +41,18 @@ public class XMLPropiedades extends Propiedades {
 	public void set_Logger(String logger){
 		this.logger = logger;
 	}
+	public void set_TipoFiltro(String  n){
+		if(n.contains("D")){
+			this.tipoFiltro = false;
+		}
+		else {
+			this.tipoFiltro = true;
+		}
+	}
+	public void set_Filtro(String n){
+		this.filtro = n;
+	}
+	
 	
 	public String get_LogLevel(){
 		return this.logLevel;
@@ -54,5 +68,11 @@ public class XMLPropiedades extends Propiedades {
 	}
 	public String get_Loguer(){
 		return this.logger;
+	}
+	public boolean get_tipoFiltro(){
+		return this.tipoFiltro;
+	}
+	public String get_Filtro(){
+		return this.filtro;
 	}
 }

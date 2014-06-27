@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tests tipo="1">
+	<Config>
+			<LogLevel>TRACE</LogLevel>
+			<Archivo>/tmp/AplicacionXML3.log</Archivo>
+			<Formato>%d%p%t%g</Formato>
+			<Aplicacion>TP2</Aplicacion>
+			<Loguer>logger3</Loguer>
+			<Filtro>tp</Filtro>
+			<TipoFiltro>D</TipoFiltro>
+			<FJSON>true</FJSON>
+	</Config>
+</Tests>

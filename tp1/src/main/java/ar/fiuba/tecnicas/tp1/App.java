@@ -15,27 +15,27 @@ public class App
     {
     	// StaticLoggerBinder binderFactory;
     	LogFactory factory = new LogFactory();
-    	Logeable log_nuestro1;
-    	Logeable log_nuestro2;
+    	Logeable loggernuestro1;
+    	Logeable loggernuestro2;
+    	Logeable loggernuestro3;
         BuilderLog builder = new BuilderLog();
-        log_nuestro1 = builder.get_Log();
-        log_nuestro2 = builder.get_Log("conf/conf1/config.properties");
+        loggernuestro1 = builder.get_Log("conf/config1.properties.xml");
+        loggernuestro2 = builder.get_Log("conf/config2.properties.xml");
+        loggernuestro3 = builder.get_Log("conf/config3.properties.xml");
+        final Logger logger1 = factory.getLogger("logger1");  
+        final Logger logger2 = factory.getLogger("logger2");
+        final Logger logger3 = factory.getLogger("logger3");
         
-        final Logger log2 = factory.getLogger("Marcelo");  
-        final Logger log3 = factory.getLogger("NICO");
-                
-        log_nuestro1.debug("No debe loguear DEBUG");
-        log_nuestro1.info("Ver como loguea INFO");
-        log_nuestro1.fatal("Ver como loguea FATAL");
-        log_nuestro2.debug("No debe loguear DEBUG");
-        log_nuestro2.info("Ver como loguea INFO");
-        log_nuestro2.fatal("Ver como loguea FATAL");
-      //   log.fatal(log.get_Nombre());
-        log2.debug("No debe loguea DEBUGGG");
-        log2.info("Ver como loguea INFOOOOOO");
-        log2.error("Ver como loguea un Erroor");
-        log3.debug("No debe loguea DEBUGGG");
-        log3.info("Ver como loguea INFOOOOOO");
-        log3.error("Ver como loguea un Erroor");
-    }
+        logger1.info("Helllo Word");
+        logger1.info("Hola Mundo");
+        logger1.info("Hallo Welt");
+        
+        logger2.info("tp no deberia loguearse");
+        logger2.debug("tp deberia loguearse");
+        
+        logger3.trace("no deberia loguearse..");
+        logger3.warn("esto deberia loggearse con excepcion", new NullPointerException());
+        logger3.error("esto deberia loggearse tambien .....");
+        
+ }
 }

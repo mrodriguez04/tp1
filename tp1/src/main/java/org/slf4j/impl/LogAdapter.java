@@ -295,7 +295,7 @@ public class LogAdapter implements Logger{
 
 	public void warn(String arg0, Throwable arg1) {
 		// TODO Auto-generated method stub
-		log.warn(arg0);
+		log.warn(arg0, arg1);
 	}
 
 	public void warn(Marker arg0, String arg1) {

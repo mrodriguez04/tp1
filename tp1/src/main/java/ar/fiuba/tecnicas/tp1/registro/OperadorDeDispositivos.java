@@ -26,6 +26,12 @@ public class OperadorDeDispositivos {
 		
 		}
 	}
+	public void ImprimirExcepcion(String dato){
+		for ( Dispositivo ds : ld ) {
+			ds.Imprimir(dato);
+		
+		}
+	}
 	
 	public void agregarFiltro(FiltroBasico filtro){
 		this.filtro=filtro;

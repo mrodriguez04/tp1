@@ -109,27 +109,27 @@ public class Logeable {
 	public void fatal(String log){
 		registra.fatal(log);
 	}
-	public void trace(String log, Exception e){
+	public void trace(String log, Throwable e){
 		this.trace(log);
 		registra.excepcion(e);
 	}
-	public void debug(String log, Exception e){
+	public void debug(String log, Throwable e){
 		this.debug(log);
 		registra.excepcion(e);
 	}
-	public void info(String log, Exception e){
+	public void info(String log, Throwable e){
 		registra.info(log);
 		registra.excepcion(e);
 	}
-	public void warn(String log, Exception e){
+	public void warn(String log, Throwable e){
 		registra.warn(log);
 		registra.excepcion(e);
 	}
-	public void error(String log, Exception e){
+	public void error(String log, Throwable e){
 		registra.error(log);
 		registra.excepcion(e);
 	}
-	public void fatal(String log, Exception e){
+	public void fatal(String log, Throwable e){
 		registra.fatal(log);
 		registra.excepcion(e);
 	}

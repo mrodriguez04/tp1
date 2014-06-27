@@ -28,7 +28,8 @@ public class AppLogTraceException
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel);
       
-        Exception e = new Exception();
+        Exception e = new NullPointerException();
+        
 
            
                 
@@ -36,7 +37,7 @@ public class AppLogTraceException
 		
         log.debug("Ver como loguea DEBUG");
         log.info("Ver como loguea INFO");
-        log.warn("Ver como loguea WARN");
+        log.warn("Ver como loguea WARN",e);
         log.error("Ver como loguea ERROR");
         log.fatal("Ver como loguea FATAL");
         log.trace("Ver como loguea TRACE",e);
