@@ -26,8 +26,10 @@ public class BuilderLog {
 		FiltroBasico filtro;
 		if (config.get_tipoFiltro()){
 				filtro = new FiltroBasico (config.get_filtro(), config.get_tipoFiltro());
+			//	System.out.println(config.get_tipoFiltro());
 		}else {
 				filtro = new FiltroBasico();
+			//	System.out.println(config.get_tipoFiltro());
 		}
 		titulo = config.get_fjson();
     	
@@ -41,6 +43,10 @@ public class BuilderLog {
         Registrador nivel = new Trace(oper, format);
         Logeable log = new Logeable(nivel, config.get_Loguer());
 		return log;
+	}
+	
+	public Config get_config(){
+		return this.config;
 	}
 	
 	

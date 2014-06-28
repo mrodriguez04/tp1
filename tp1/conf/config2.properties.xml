@@ -6,7 +6,7 @@
 			<Formato>%d%p%t%g</Formato>
 			<Aplicacion>TP2</Aplicacion>
 			<Loguer>logger2</Loguer>
-			<Filtro>tp INFO</Filtro>
+			<Filtro>tp</Filtro>
 			<TipoFiltro>A</TipoFiltro>
 			<FJSON>false</FJSON>
 	</Config>

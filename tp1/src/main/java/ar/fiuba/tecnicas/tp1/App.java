@@ -26,7 +26,7 @@ public class App
         final Logger logger2 = factory.getLogger("logger2");
         final Logger logger3 = factory.getLogger("logger3");
         
-        
+    //    System.out.println(builder.get_config().get_tipoFiltro());
         
         logger1.info("Helllo Word");
         logger1.info("Hola Mundo");
