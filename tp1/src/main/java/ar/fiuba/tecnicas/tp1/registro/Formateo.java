@@ -30,8 +30,8 @@ public class Formateo{
 				nombre_loguer = new Loguer(nombre, this, titulo);
 				lf.add(nombre_loguer);
 			}else if ( v.equals("F")){
-				nombre_archivo = new NombreArchivo(path, titulo);
-				lf.add(nombre_archivo);
+				//nombre_archivo = new NombreArchivo(path, titulo);
+				//lf.add(nombre_archivo);
 			}
 			
 		}
