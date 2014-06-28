@@ -76,7 +76,7 @@ public class XMLPropiedades extends Propiedades {
 	public String get_Loguer(){
 		return this.logger;
 	}
-	public boolean get_tipoFiltro(){
+	public boolean get_TipoFiltro(){
 		return this.tipoFiltro;
 	}
 	public String get_Filtro(){
